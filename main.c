@@ -5,7 +5,7 @@
 #include <conio.h>
 #include <stdbool.h>
 #include "mytype.h"
-#include <bai1.h>
+#include "bai1.h"
 
 int main()
 {

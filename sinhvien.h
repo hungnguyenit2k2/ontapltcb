@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <mytype.h>
+#include "mytype.h"
 #include <stdlib.h>
 
 void nhapSinhVien(Sinhvien *sinhviens, int n)

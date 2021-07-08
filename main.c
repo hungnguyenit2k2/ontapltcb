@@ -15,10 +15,12 @@ float tong1deni(int i)
     return s;
 }
 
-void convertToBinary(int n) {
-    if (n) {
-        convertToBinary(n/2);
-        printf("%d", n%2);
+void convertToBinary(int n)
+{
+    if (n)
+    {
+        convertToBinary(n / 2);
+        printf("%d", n % 2);
     }
 }
 
@@ -61,7 +63,8 @@ bool isSymetric(int n)
 
 bool isSquare(int n)
 {
-    if (n==1) return true; // thêm dòng này
+    if (n == 1)
+        return true; // thêm dòng này
     int i = 1;
     while (i <= n / 2) // sửa từ < thành <=
     {
@@ -140,7 +143,8 @@ typedef struct Book
 
 void inputBooks(Book *books, int n)
 {
-    if (n == 0){
+    if (n == 0)
+    {
         printf("NONE\n");
         system("pause");
     }
@@ -377,7 +381,7 @@ bool compareDOB(Sinhvien sv1, Sinhvien sv2)
 // Sắp xếp sinh viên theo hàm callback
 // type: Tiêu đề sẽ hiện trên bảng khi in ra
 // reverse = true: sắp xếp ngược
-void sort(Sinhvien *sinhviens, int n, bool (*callback)(Sinhvien, Sinhvien),char type[], bool reverse)
+void sort(Sinhvien *sinhviens, int n, bool (*callback)(Sinhvien, Sinhvien), char type[], bool reverse)
 {
     for (int i = 0; i < n - 1; i++)
     {
@@ -395,13 +399,11 @@ void sort(Sinhvien *sinhviens, int n, bool (*callback)(Sinhvien, Sinhvien),char 
 void bai1()
 {
     int count = 0;
-    for (int i = 1; i <= 9; i++)
-        for (int j = 1; j <= 9; j++)
-            if (isSquare(i * j))
-                {
-                    printf("%d%d,", i, j);
-                    count++;
-                }
+    for (int i = 11; i <= 99; i++)
+    {
+        if (isSquare(i) == 1)
+            count++;
+    }
     int sum = count * pow(10, 5);
     printf("%d", sum);
 }
@@ -557,9 +559,12 @@ void tryNextArray(int *day, int n, int index)
     }
 }
 
-void bai8() {
+void bai8()
+{
     int arr[20] = {0};
-    int n; printf("nhap n: "); scanf("%d", &n);
+    int n;
+    printf("nhap n: ");
+    scanf("%d", &n);
     tryNextArray(arr, n, 0);
 }
 
@@ -707,10 +712,11 @@ void bai14()
 
 void bai15()
 {
-    int n=0;
-    Book* books = (Book*)malloc(5*sizeof(Book));
+    int n = 0;
+    Book *books = (Book *)malloc(5 * sizeof(Book));
     int option = -1;
-    while (true) {
+    while (true)
+    {
         system("cls");
         printf("MENU\n");
         printf("1. Nhap sach\n");
@@ -719,11 +725,13 @@ void bai15()
         printf("4. In sach re hon 10k\n");
         printf("5. In sach dat nhat va re nhat\n");
         printf("0. Thoat\n");
-        printf("Lua chon: "); scanf("%d", &option);
+        printf("Lua chon: ");
+        scanf("%d", &option);
         switch (option)
         {
         case 1:
-            printf("Nhap so sach: "); scanf("%d", &n);
+            printf("Nhap so sach: ");
+            scanf("%d", &n);
             inputBooks(books, n);
             break;
         case 2:
@@ -791,7 +799,7 @@ void bai16()
             filterSinhviens(sinhviens, n, isHaTinhNgheAn8, "Nghe An, Ha Tinh, GPA > 8");
             break;
         case 6:
-            sort(sinhviens, n, compareAverageGpa,"Sap xep theo GPA trung binh", false);
+            sort(sinhviens, n, compareAverageGpa, "Sap xep theo GPA trung binh", false);
             break;
         case 7:
             sort(sinhviens, n, compareGpa1, "Sap xep thep GPA ki 1", false);

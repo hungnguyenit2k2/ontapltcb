@@ -90,10 +90,7 @@ bool isAmstrong(int n)
     {
         sum += pow(arr[i], count);
     }
-    if (sum == n)
-        return true;
-    else
-        return false;
+    return sum == n;
 }
 
 void nhapDay(int *arr, int n)
@@ -381,7 +378,7 @@ bool compareDOB(Sinhvien sv1, Sinhvien sv2)
 // Sắp xếp sinh viên theo hàm callback
 // type: Tiêu đề sẽ hiện trên bảng khi in ra
 // reverse = true: sắp xếp ngược
-void sort(Sinhvien *sinhviens, int n, bool (*callback)(Sinhvien, Sinhvien), char type[], bool reverse)
+void sortSinhVien(Sinhvien *sinhviens, int n, bool (*callback)(Sinhvien, Sinhvien), char type[], bool reverse)
 {
     for (int i = 0; i < n - 1; i++)
     {
@@ -514,10 +511,7 @@ void bai7()
     {
         if (b == 0)
         {
-            if (c == 0)
-                printf("Phuong trinh vo so nghiem");
-            else
-                printf("Phuong trinh vo nghiem");
+            printf("%s", c==0 ? "Phuong trinh vo so nghiem" : "Phuong trinh vo nghiem");
         }
         else
             printf("Nghiem duy nhat la %f", -c / b);
@@ -571,20 +565,10 @@ void bai8()
 void bai9()
 {
     int n;
-    printf("nhap n: ");
-    scanf("%d", &n);
-    if (isSquare(n))
-        printf("La so chinh phuong\n");
-    else
-        printf("Khong la so chinh phuong\n");
-    if (isPrime(n))
-        printf("La so nguyen to\n");
-    else
-        printf("Khong la so nguyen to\n");
-    if (isSymetric(n))
-        printf("La so doi xung\n");
-    else
-        printf("Khong la so doi xung\n");
+    printf("nhap n: "); scanf("%d", &n);
+    printf("%sLa so chinh phuong\n", isSquare(n) ? "" : "Khong ");
+    printf("%sLa so nguyen to\n", isPrime(n) ? "" : "Khong ");
+    printf("%sLa so doi xung\n", isSymetric(n) ? "" : "Khong");
 }
 
 void bai10()
@@ -603,7 +587,7 @@ void bai11()
 {
     float arr[1000] = {0};
     int n;
-    printf("nhap so phan tu: ");
+    printf("Nhap so phan tu: ");
     scanf("%d", &n);
     for (int i = 0; i < n; i++)
         scanf("%f", &arr[i]);
@@ -772,8 +756,6 @@ void bai16()
         printf("4. In sinh vien sinh nam 1990\n");
         printf("5. In sinh vien o Ha Tinh hoac NA TB >8\n");
         printf("6. In sinh vien theo GPA trung binh tang dan\n");
-        printf("7. In sinh vien theo GPA ki 1 tang dan\n");
-        printf("8. In sinh vien theo ngay sinh tang dan\n");
         printf("0. Thoat\n");
         printf("Lua chon: ");
         scanf("%d", &option);
@@ -799,13 +781,13 @@ void bai16()
             filterSinhviens(sinhviens, n, isHaTinhNgheAn8, "Nghe An, Ha Tinh, GPA > 8");
             break;
         case 6:
-            sort(sinhviens, n, compareAverageGpa, "Sap xep theo GPA trung binh", false);
+            sortSinhVien(sinhviens, n, compareAverageGpa, "Sap xep theo GPA trung binh", false);
             break;
         case 7:
-            sort(sinhviens, n, compareGpa1, "Sap xep thep GPA ki 1", false);
+            sortSinhVien(sinhviens, n, compareGpa1, "Sap xep thep GPA ki 1", false);
             break;
         case 8:
-            sort(sinhviens, n, compareDOB, "Sap xep theo ngay sinh", false);
+            sortSinhVien(sinhviens, n, compareDOB, "Sap xep theo ngay sinh", false);
             break;
         case 0:
             exit(0);
@@ -816,11 +798,12 @@ void bai16()
             break;
         }
     }
+    free(sinhviens);
 }
 
 int main()
 {
     // cần chạy bài nào thì gọi hàm ra nhé
     // ví dụ cần bài 1 thì gọi bai1
-    bai1();
+    bai9();
 }

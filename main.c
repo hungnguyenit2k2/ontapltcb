@@ -399,10 +399,10 @@ void sort(Sinhvien *sinhviens, int n, bool (*callback)(Sinhvien, Sinhvien), char
 void bai1()
 {
     int count = 0;
-    for (int i = 11; i <= 99; i++)
-    {
-        if (isSquare(i) == 1)
-            count++;
+    for (int i=1; i<=9; i++){
+        for (int j=1; j<=9; j++) {
+            if (isSquare(i*j)) count++;
+        }
     }
     int sum = count * pow(10, 5);
     printf("%d", sum);

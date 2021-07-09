@@ -69,10 +69,7 @@ bool isSymetric(int n)
         n2 = n2 * 10 + n3 % 10;
         n3 /= 10;
     }
-    if (n2 == n)
-        return true;
-    else
-        return false;
+    return n2 == n;
 }
 
 bool isAmstrong(int n)

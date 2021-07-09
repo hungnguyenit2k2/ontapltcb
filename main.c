@@ -1,5 +1,5 @@
-#include "myfunctions.h"
+#include "bai8.h"
 
 int main() {
-    printf("%d", isSquare(9));
+    bai8();
 }

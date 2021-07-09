@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1625814610 source:c:\users\hung\desktop\laptrinhcanban\ontap\bai1 - so chinh phuong\main.c
+	"bai8.h"
+
+1625767096 c:\users\hung\desktop\laptrinhcanban\ontap\bai1 - so chinh phuong\bai8.h
+	<stdio.h>
+	"myfunctions.h"
+
+1625813480 c:\users\hung\desktop\laptrinhcanban\ontap\bai1 - so chinh phuong\myfunctions.h
+	<stdbool.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+

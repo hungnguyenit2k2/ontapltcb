@@ -3,6 +3,12 @@
 #include <math.h>
 #include <string.h>
 
+
+/**
+ * \brief kiểm tra xem đối số truyền vào có phải là số chính phương hay không
+ * \param n số tự nhiên truyền vào
+ * \return kết quả của phép kiểm tra là kiểu bool
+*/
 bool isSquare(int n)
 {
     if (n == 1)
@@ -113,15 +119,20 @@ void sapXepDay(int *arr, int n)
 
 int isInString(char chr, char str[])
 {
+    // nếu xâu là xâu rỗng thì trả về false
     if (str[0] == '\0')
-        return 0;
+        return false;
     else
+        // duyệt qua các phần tử của xâu
         for (int i = 0; i < strlen(str); i++)
         {
+            // nếu gặp bất kì phần tử nào của xâu có giá trị bằng giá trị của chr
+            // thi trả về true
             if (str[i] == chr)
-                return 1;
+                return true;
         }
-    return 0;
+    // sau khi đã duyệt hết mà không tìm thấy thì trả về false
+    return false;
 }
 
 void tryNextArray(int *day, int n, int index)

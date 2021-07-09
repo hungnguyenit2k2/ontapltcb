@@ -16,21 +16,7 @@ int getFirstXLast(int n) {
 
 bool isSquare(int n)
 {
-    // nếu n = trả về true
-    if (n == 1)
-        return true;
-    // nếu n>1
-    // cho i chạy từ 1 đến n/2
-    int i = 1;
-    while (i <= n / 2)
-    {
-        // nếu thấy i*i = n thì trả về true 
-        if (i * i == n)
-            return true;
-        i++;
-    }
-    // nếu duyệt qua hết các i mà không được thì trả về false
-    return false;
+    return n == 0 ? false : pow((int)sqrt(n), 2) == n;
 }
 
 void convertToBinary(int n)

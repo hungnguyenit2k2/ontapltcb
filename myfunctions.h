@@ -3,23 +3,33 @@
 #include <math.h>
 #include <string.h>
 
+int getFirstXLast(int n) {
+    int arr[7] = {0};
+    int i = 0;
+    while (n) {
+        arr[i] = n%10;
+        i++;
+        n/=10;
+    }
+    return arr[0]*arr[i-1];
+}
 
-/**
- * \brief kiểm tra xem đối số truyền vào có phải là số chính phương hay không
- * \param n số tự nhiên truyền vào
- * \return kết quả của phép kiểm tra là kiểu bool
-*/
 bool isSquare(int n)
 {
+    // nếu n = trả về true
     if (n == 1)
         return true;
+    // nếu n>1
+    // cho i chạy từ 1 đến n/2
     int i = 1;
     while (i <= n / 2)
     {
+        // nếu thấy i*i = n thì trả về true 
         if (i * i == n)
             return true;
         i++;
     }
+    // nếu duyệt qua hết các i mà không được thì trả về false
     return false;
 }
 
@@ -106,7 +116,7 @@ void nhapDay(int *arr, int n)
 }
 
 void sapXepDay(int *arr, int n)
-{
+{   
     for (int i = 0; i < n - 1; i++)
         for (int j = i + 1; j < n; j++)
             if (arr[i] > arr[j])
@@ -137,13 +147,17 @@ int isInString(char chr, char str[])
 
 void tryNextArray(int *day, int n, int index)
 {
+    // thử các giá trị có thể có của chữ số thứ index
     for (int i = 0; i <= 1; i++)
     {
+        // gán phần tử thứ index cho i
         day[index] = i;
+        // đã duyệt đến phần tử cuối cùng thì in ra dãy
         if (index == n - 1)
         {
             inDay(day, n);
         }
+        // còn không thì xử lí phần tử tiếp theo
         else
         {
             tryNextArray(day, n, index + 1);

@@ -3,9 +3,12 @@
 
 void bai7()
 {
+    // khai báo từ a, b, c
     float a, b, c;
     printf("nhap a, b, c: ");
     scanf("%f %f %f", &a, &b, &c);
+    // nếu a = 0, b=0, c=0 thì pt vô số nghiệm
+    // nếu a = 0, b=0, 
     if (a == 0)
     {
         if (b == 0)

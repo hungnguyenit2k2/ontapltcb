@@ -12,3 +12,31 @@
 	<math.h>
 	<string.h>
 
+1626693168 source:c:\users\hung\desktop\ontapltcb\main.c
+	"bai15.h"
+
+1626692442 c:\users\hung\desktop\ontapltcb\bai8.h
+	<stdio.h>
+	"myfunctions.h"
+
+1626692442 c:\users\hung\desktop\ontapltcb\myfunctions.h
+	<stdbool.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+
+1626693195 c:\users\hung\desktop\ontapltcb\bai15.h
+	<stdio.h>
+	<stdlib.h>
+	"book.h"
+	<stdbool.h>
+
+1626693441 c:\users\hung\desktop\ontapltcb\book.h
+	<stdio.h>
+	"mytype.h"
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
+1626692710 c:\users\hung\desktop\ontapltcb\mytype.h
+

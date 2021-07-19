@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "sinhvien.h"
-#include "mytype.h"
 
 void bai16()
 {

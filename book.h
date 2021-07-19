@@ -2,6 +2,7 @@
 #include "mytype.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 void inputBooks(Book *books, int n)
 {
@@ -69,7 +70,7 @@ bool isLessThan10k(Book book)
     return book.price < 10000;
 }
 
-void filterBooks(Book *books, int n, bool (*callback)(Book), char type[])
+void filterBooks(Book *books, int n, bool (*callback)(Book), char* type)
 {
     Book result[50];
     int count = 0;

@@ -1,5 +1,5 @@
-#include "bai8.h"
+#include "bai16.h"
 
 int main() {
-    bai8();
+    bai16();
 }

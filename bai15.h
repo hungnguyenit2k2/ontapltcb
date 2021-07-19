@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "mytype.h"
 #include "book.h"
+#include <stdbool.h>
 
 void bai15()
 {
@@ -44,7 +44,6 @@ void bai15()
             break;
         default:
             printf("Nhap sai, nhap lai");
-            system("pause");
             break;
         }
     }

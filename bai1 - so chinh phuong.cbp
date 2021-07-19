@@ -31,9 +31,28 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="bai1.h" />
+		<Unit filename="bai10.h" />
+		<Unit filename="bai11.h" />
+		<Unit filename="bai12.h" />
+		<Unit filename="bai13.h" />
+		<Unit filename="bai14.h" />
+		<Unit filename="bai15.h" />
+		<Unit filename="bai16.h" />
+		<Unit filename="bai2.h" />
+		<Unit filename="bai3.h" />
+		<Unit filename="bai4.h" />
+		<Unit filename="bai5.h" />
+		<Unit filename="bai6.h" />
+		<Unit filename="bai7.h" />
+		<Unit filename="bai8.h" />
+		<Unit filename="bai9.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="myfunctions.h" />
+		<Unit filename="mytype.h" />
+		<Unit filename="sinhvien.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -2,6 +2,7 @@
 #include <string.h>
 #include "mytype.h"
 #include <stdlib.h>
+#include <stdbool.h>
 
 void nhapSinhVien(Sinhvien *sinhviens, int n)
 {
@@ -27,7 +28,7 @@ void nhapSinhVien(Sinhvien *sinhviens, int n)
     }
 }
 
-void inSinhVien(Sinhvien *sinhviens, int n, char type[])
+void inSinhVien(Sinhvien *sinhviens, int n, char* type)
 {
     system("cls");
     if (n == 0)
@@ -130,10 +131,7 @@ bool compareDate(Sinhvien sv1, Sinhvien sv2)
         return sv1.DOB.year > sv2.DOB.year;
 }
 
-// Sắp xếp sinh viên theo hàm callback
-// type: Tiêu đề sẽ hiện trên bảng khi in ra
-// reverse = true: sắp xếp ngược
-void sortSinhVien(Sinhvien *sinhviens, int n, bool (*callback)(Sinhvien, Sinhvien), char type[], bool reverse)
+void sortSinhVien(Sinhvien *sinhviens, int n, bool (*callback)(Sinhvien, Sinhvien), char* type, bool reverse)
 {
     for (int i = 0; i < n - 1; i++)
     {

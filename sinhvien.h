@@ -34,7 +34,7 @@ void inSinhVien(Sinhvien *sinhviens, int n, char type[])
         printf("NONE");
     else
     {
-        printf("THONG KE SINH VIEN (%s)\n");
+        printf("THONG KE SINH VIEN (%s)\n", type);
         printf("| STT | Ho Ten              | Ngay sinh  | Que quan   | TB K1 | TB K2 |\n");
         for (int i = 0; i < n; i++)
         {

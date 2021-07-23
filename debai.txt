@@ -1,0 +1,86 @@
+Bài 1: Lập trình tìm và hiển thị lên màn hình tất cả các số nguyên dương có 7 chữ số thoả mãn tích của chữ số đầu và chữ số cuối là một số chính phương. Đưa ra màn hình số lượng số tìm được. 
+Bài 2: Lập trình nhập vào một số nguyên dương N (N < 2 tỉ). Hãy tìm tất cả các số nguyên dương M  N thoả mãn hiệu của chữ số lớn nhất và nhỏ nhất của M bằng 2.
+Bài 3C: ho số nguyên N trong hệ cơ số 10, hãy chuyển N sang hệ cơ số 2, hiển thị kết qủa lên màn hình.
+Bài 4: Nhập vào số nguyên dương n, hãy tính và đưa ra màn hình các tổng sau đây:
+s1=1/(1*2)+1/(2*3)+⋯+1/(n*(n+1))
+s2=1+1/(1+2)+1/(1+2+3)+⋯+1/(1+2+3+⋯+n)
+Bài 5: Nhập vào số nguyên dương n và số thực x, hãy tính và đưa ra màn hình các tổng sau đây:
+s1=x^2+x^4+⋯+x^(2*n)
+s2=〖x+x〗^3+x^5+⋯+x^(2*n+1)
+Bài 6: Nhập vào hai số nguyên dương m và y; hãy cho biết tháng m năm y có bao nhiêu ngày? (biết rằng 1  m  12). 
+Bài 7: Lập trình giải phương trình bậc hai  ax2 + bx + c = 0; trong đó a, b, c là các số thực nhập từ bàn phím.
+Bài 8: Cho số nguyên dương n (n  20); hãy liệt kê tất cả các dãy nhị phân khác nhau có độ dài n lên màn hình, mỗi dãy một dòng. 
+Bài 9: Cho một số nguyên dương M (M < 2 tỉ), hãy lập trình trả lời các câu hỏi sau đây:
+	M có phải là số chính phương?
+	M có phải là số nguyên tố?
+	M có phải là số đối xứng?
+Bài 10: Một số nguyên dương có n chữ số được gọi là số Amstrong nếu thoả mãn điều kiện: tổng luỹ thừa bậc n của các chữ số của nó bằng chính nó (vd: 153 = 13 + 53 + 33). Bài toán đặt ra là: cho số nguyên dương M (M < 2 tỉ), hãy tìm và liệt kê lên màn hình tất cả các số Amstrong nhỏ hơn M.
+Bài 11: Cho dãy số thực gồm n phần tử ( n  1000), lập trình thực hiện các việc sau đây:
+	Nhập n và dãy n số thực từ bàn phím
+	Tìm và hiển thị lên màn hình vị trí đầu tiên của phần tử có giá trị NHỎ nhất trong dãy (tính từ trái sang).
+	Tìm và hiển thị lên màn hình vị trí đầu tiên của phần tử có giá trị LỚN nhất trong dãy (tính từ trái sang).
+	Giả sử m là giá trị trung bình của dãy n phần tử đã nhập; hãy tìm phần tử có giá trị gần với m nhất.
+	Tìm giá trị a, b (a, b là các số nguyên) sao cho các phần tử của dãy đã nhập đều nằm trong đoạn [a, b].
+Bài 12: Cho một dãy số nguyên gồm n số (n < 1000); hãy lập trình thực hiện các công việc sau đây:
+	Nhập số n và dãy n số nguyên từ bàn phím
+	Hiển thị dãy đã nhập lên màn hình
+	Sắp xếp lại dãy đã cho theo chiều không giảm; hiển thị dãy sau khi sắp xếp lên màn hình
+	Tính và hiển thị lên màn hình tổng các số khác nhau trong dãy đã nhập.
+	Tìm và hiển thị các số nguyên tố khác nhau có mặt trong dãy đã nhập.
+Bài 13: Lập trình nhập vào một xâu kí tự từ bàn phím (chỉ gồm chữ cái, chữ số, và dấu cách), hãy đếm và hiển thị lên màn hình số lượng từ bắt đầu bằng chữ số có mặt trong xâu đã nhập. Từ được hiểu là một chuỗi các kí tự liên tiếp trong xâu không chứa dấu cách.
+Bài 14: Lập trình nhập vào hai xâu kí tự s1 và s2 từ bàn phím (mỗi xâu không quá 20 kí tự và không chứa dấu cách), hãy đếm và đưa ra màn hình số lượng kí tự khác nhau chỉ có mặt ở một trong hai xâu đã cho:
+	Ví dụ: s1 = “d4wxyzd”		s2 = “567ghk”
+	Số lượng kí tự chung là: 12 // 13 mà nhỉ 😐 
+Bài 15: Một cửa hàng sách có n đầu sách, mỗi đầu sách được mô tả bởi các thông tin sau đây:
+Tên sách; Tên tác giả; Nhà xuất bản; Năm xuất bản; Số lượng; Giá bán.
+Hãy lập trình thực hiện các việc sau đây:
+	Nhập vào số lượng đầu sách n và thông tin về n đầu sách.
+	Đưa các thông tin đã nhập ra màn hình, trình bày sao cho dễ nhìn
+	Hãy đưa ra màn hình thông tin về cách quyển sách được xuất bản bởi nhà xuất bản Springer.
+	Hãy tìm và hiển thị lên màn hình thông tin về những quyển sách có giá bán  10.000
+	Hãy đưa ra tên của các đầu sách có giá bán thấp nhất và cao nhất hiện có trong cửa hàng.
+
+Bài 16: Một lớp học có n sinh viên, mỗi sinh viên được mô tả bởi các thông tin sau: Họ tên, Năm sinh; Quê quán; Điểm trung bình học kì 1; Điểm trung bình học kì 2.
+Hãy lập trình thực hiện các việc sau đây:
+	Nhập vào số lượng sinh viên và thông tin về các sinh viên
+	Đưa các thông tin đã nhập ra màn hình 
+	Biết rằng: Điểm trung bình = (Điểm trung bình học kì 1 + Điểm trung bình học kì 2)/2; Hãy tìm và hiển thị thông tin về các sinh viên có Điểm trung bình > 9.0
+	Sắp xếp danh sách sinh viên theo chiều không giảm của Điểm trung bình.
+	Đếm và hiển thị số lượng sinh viên sinh năm 1990.
+	Đếm và hiển thị số lượng sinh viên có quê “Ha Tinh” hoặc “Nghe An” và có Điểm trung bình > 8.0
+	
+Bài 17: Cho file dữ liệu “demtu.inp” chỉ gồm các chữ số, chữ cái và dấu cách với cấu trúc như sau:
+	Dòng đầu ghi số N
+	N dòng tiếp theo, mỗi dòng ghi một xâu kí tự
+Hãy lập trình thực hiện các việc sau đây:
+	Đọc dữ liệu từ file đã cho
+	Đếm số lượng từ bắt đầu bằng chữ cái có trong file, từ được hiểu là một xâu kí tự không chứa dấu cách
+	Đưa dữ liệu ra file “demtu.out”, ghi một số duy nhất là kết quả của câu trên.
+	Ví dụ:
+
+demtu.inp
+3
+abc124       56hk79
+6868     abcde    gh780
+abc345kmda          hksh
+
+demtu.out
+5
+
+Bài 18: Cho file dữ liệu “songuyen.inp” chỉ gồm các chữ số và dấu cách, dữ liệu có thể có mặt trên nhiều dòng của file. 
+Hãy lập trình thực hiện các việc sau đây:
+	Đọc dữ liệu vào từ file songuyen.inp theo mô tả như trên
+	Tìm các số nguyên khác nhau có trong file đã cho
+	Sắp xếp các số nguyên tìm được sao cho đoạn đầu chỉ gồm các số chẵn, đoạn sau chỉ gồm các số lẻ.
+	Sắp xếp các đoạn số chẵn theo chiều tăng dần
+	Sắp xếp các đoạn số lẻ theo chiều giảm dần
+	Ghi kết quả ra file songuyen.out với cấu trúc như sau: dòng đầu ghi số lượng số, dòng thứ hai ghi các số chẵn đã sắp xếp, dòng thứ ba ghi các số lẻ đã sắp xếp, hai số cách nhau bởi ít nhất một dấu cách
+	Ví dụ:
+songuyen.inp
+345    12   54
+23  12 
+68  345    54  29
+63   23            58         12		8
+songuyen.out
+12  54  58  68
+23  29  63  345

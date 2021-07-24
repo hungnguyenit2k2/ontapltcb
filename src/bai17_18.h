@@ -108,8 +108,3 @@ void bai18()
         fprintf(fout, "%d ", arr[i]);
     }
 }
-
-int main()
-{
-    bai18();
-}

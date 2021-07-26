@@ -1,4 +1,5 @@
-// #include "bai1.h"
+#include "bai17_18.h"
+
 int main() {
-    // bai1();
+    bai17();
 }

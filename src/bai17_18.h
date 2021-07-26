@@ -32,13 +32,15 @@ void bai17()
         int count = 0;
         for (int i = 1; i <= n; i++)
         {
-            char str[50];
+            char str[50] = {"\0"};
             fscanf(fInput, "%[^\n]\n", str);
             count += wordsStartWithLetter(str);
         }
         FILE *fOuput = fopen("demtu.out", "w");
         fprintf(fOuput, "%d", count);
+        fclose(fOuput);
     }
+//    system("notepad demtu.out");
 }
 
 void swap(int *a, int *b)

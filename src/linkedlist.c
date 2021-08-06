@@ -28,9 +28,10 @@ typedef struct LinkedList {
 
 // PHẦN TIỀN KHAI BÁO HÀM
 // phần này để tránh trường hợp hàm đứng trước gọi hàm đứng sau, gây ra lỗi
-// tất cả các hàm từ createNode đếm deleteAt PHẢI ĐỂ LẠI
+// tất cả các hàm từ createNode đếm listLength PHẢI ĐỂ LẠI
 // những hàm còn lại đề yêu cầu hàm nào thì để hàm đó lại, còn lại xoá hết
 // XOÁ CẢ PHẦN ĐỊNH NGHĨA BÊN DƯỚI
+
 node createNode(NodeType newNodeData);
 void swapNodeData(node a, node b);
 void addHead(node *head, NodeType newNodeData);
@@ -201,14 +202,17 @@ void deleteTail(node *head) {
 
 /** Hàm xoá node tại vị trí pos của DSLK
  * Vị trí của các node được đánh số từ 0
- * hàm nhận vào 2 đối số là địa chỉ của đầu DSLK và dữ liệu của node mới
+ * hàm nhận vào 2 đối số là địa chỉ của đầu DSLK (node* head) và vị trí cần xoá (int pos)
  * Lưu ý, lí do phải khai báo node *head là bởi vì ta định nghĩa node là một kiểu con trỏ,
  * cũng như một kiểu dữ liệu thông thường như số nguyên, số thập phân,...
  * nên nếu khai báo node head thì head chỉ là tham số hình thức, nên không thay đổi đầu DSLK mà ta truyền vào
  * gây ra lỗi, thay vào đó ta khai báo node *head và truyền tham chiếu của đầu DSLK (&head) vào
  * */
 void deleteAt(node *head, int pos) {
+    // nếu pos <= 0 hoặc *head == NULL (ds rỗng) hoặc *head->next == NULL (ds có 1 node) thì xoá node đầu luôn
     if (pos <= 0 || *head == NULL || (*head)->next == NULL) deleteHead(head);
+    // ngược lại duyệt qua các node giống như thêm node
+    // nhưng thay vì đuyệt đến node cuối thì mình duyệt đến node trước node cuối thôi
     else {
         int k = 1;
         node p = *head;
@@ -221,20 +225,40 @@ void deleteAt(node *head, int pos) {
     }
 }
 
+/** Hàm nhập DSLK
+ * hàm nhận vào 1 đối số là địa chỉ của đầu DSLK (node* head)
+ * Lưu ý, lí do phải khai báo node *head là bởi vì ta định nghĩa node là một kiểu con trỏ,
+ * cũng như một kiểu dữ liệu thông thường như số nguyên, số thập phân,...
+ * nên nếu khai báo node head thì head chỉ là tham số hình thức, nên không thay đổi đầu DSLK mà ta truyền vào
+ * gây ra lỗi, thay vào đó ta khai báo node *head và truyền tham chiếu của đầu DSLK (&head) vào
+ * */
 void inputLK(node *head) {
-//    int stt = listLength(head) + 1;
+//    int stt = listLength(head) + 1; // cần thì thêm cái này, không thì thôi
+    // tạo một biến NodeType mới để chứa dữa liệu
     NodeType newNode;
     do {
+        // nhập dữ liệu cho newNode, phần này tự xử nhé
         printf("name: "); fflush(stdin); gets(newNode.name);
+        // tạo ra điều kiện để dừng nhập thêm, phần này cũng tự xử, t demo một cái thôi
         if (strlen(newNode.name) == 0) break;
+        // thêm node mới có newNodeData là newNode vào đuôi
         addTail(head, newNode);
     } while (1);
 }
 
+/** Hàm in DSLK
+ * hàm nhận vào 2 đối số là địa chỉ của đầu DSLK (node* head) và tên danh sách (char* type)
+ * ví dụ type là "TẤT CẢ" thì nó sẽ in ra "Danh sach (TAT CA)"
+ * Lưu ý, lí do phải khai báo node *head là bởi vì ta định nghĩa node là một kiểu con trỏ,
+ * cũng như một kiểu dữ liệu thông thường như số nguyên, số thập phân,...
+ * nên nếu khai báo node head thì head chỉ là tham số hình thức, nên không thay đổi đầu DSLK mà ta truyền vào
+ * gây ra lỗi, thay vào đó ta khai báo node *head và truyền tham chiếu của đầu DSLK (&head) vào
+ * */
 void printLK(node *head, char* type) {
     printf("Danh sach (%s)\n", type);
     node p = *head;
     while (p != NULL) {
+        // in dữ liệu ở đây, cái này tự đi mà xử
         // Print node data here
         printf("%s ", p->data.name);
         p = p->next;
@@ -242,16 +266,31 @@ void printLK(node *head, char* type) {
     printf("\n");
 }
 
+/** Hàm lấy độ dài DSLK
+ * hàm nhận vào 2 đối số là địa chỉ của đầu DSLK (node* head) và tên danh sách (char* type)
+ * hàm trả về độ dài của ds
+ * ví dụ type là "TẤT CẢ" thì nó sẽ in ra "Danh sach (TAT CA)"
+ * Lưu ý, lí do phải khai báo node *head là bởi vì ta định nghĩa node là một kiểu con trỏ,
+ * cũng như một kiểu dữ liệu thông thường như số nguyên, số thập phân,...
+ * nên nếu khai báo node head thì head chỉ là tham số hình thức, nên không thay đổi đầu DSLK mà ta truyền vào
+ * gây ra lỗi, thay vào đó ta khai báo node *head và truyền tham chiếu của đầu DSLK (&head) vào
+ * */
 int listLength(node *head) {
+    // khởi tạo độ dài = 0
     int length = 0;
+    // nếu ds trống thì trả về 0 luôn
     if (*head == NULL) return length;
+    // ngược lại
     else {
+        // khởi tạo node p để duyệt qua ds
         node p = *head;
+        // cứ thế tăng dần độ dài ds và cho p trỏ đến next tiếp theo cho đến khi nào p->next = NULL tức là đã duyệt hết ds
         do {
             length++;
             p = p->next;
         } while (p->next != NULL);
     }
+    // trả về độ dài
     return length;
 }
 
@@ -322,6 +361,7 @@ void sortLK(node* head, int (*key)(const void*, const void*)) {
         }
     }
 }
+
 
 void inputLKFromFile(node* head) {
     FILE* f = fopen("file.inp", "rb+");
